@@ -1,0 +1,14 @@
+.site{
+    width: fit-content;
+    box-sizing: border-box;
+    margin: 20px;
+    font-size: 70px;
+}
+.title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+.pic{
+    text-align: center;
+    width: 550px;
+}
