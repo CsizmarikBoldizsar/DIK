@@ -2,12 +2,13 @@
     width: fit-content;
     box-sizing: border-box;
     margin: 20px;
+    font-size: 70px;
 }
 .title{
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
 }
-.canv{
+.pic{
     text-align: center;
-    width: 450px;
+    width: 550px;
 }
