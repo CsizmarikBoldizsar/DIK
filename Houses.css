@@ -1,5 +1,7 @@
 .site{
     width: fit-content;
+    box-sizing: border-box;
+    margin: 20px;
 }
 .title{
     font-family: 'Times New Roman', Times, serif;
@@ -8,5 +10,4 @@
 .canv{
     text-align: center;
     width: 450px;
-    height: auto;
 }
