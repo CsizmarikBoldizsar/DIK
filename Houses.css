@@ -1,0 +1,12 @@
+.site{
+    width: fit-content;
+}
+.title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+.canv{
+    text-align: center;
+    width: 450px;
+    height: auto;
+}
