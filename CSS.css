@@ -8,16 +8,37 @@
     color: rgb(0, 191, 255);
 }
 .canv{
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: 150px;
     border: 1px,solid,black;
     overflow:hidden;
 }
 
 .pic{
-    transition-duration: 3s;
-    transform: translate(500px,0px);
     width: 200px;
     height: 150px;
+    display: flex;
 }
+
+
+@keyframes anim {
+    0% {transform: translate(-200px,0px);}
+    50% {transform: translate(0px,0px);}
+    100% {transform: translate(-200px,0px);}
+}
+
+.box{
+    transform: translate(-200px,0px);
+    width: 400px;
+    height: 150px;
+    display: flex;
+    align-items: flex-start;
+    animation-name: anim;
+    animation-delay: 3s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(1,1,2,2);
+}
+
 
