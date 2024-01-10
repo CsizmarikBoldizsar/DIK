@@ -20,26 +20,68 @@
     display: flex;
 }
 
-@keyframes move{
-    0%{transform: translate(-200px,0px);}
-    100%{transform: translate(0px,0px);}
-}
-
 #box{
-    transform: translate(-200px,0px);
-    width: 400px;
+    width: 200px;
     height: 150px;
     display: flex;
     align-items: flex-start;
-    margin-left: 0px;
-    transition-duration: 3s;
+    transition-duration: 1s;
 }
-#button{
+
+
+.button{
     width: 20px;
     height: 50px;
     transform: translate(0px,50px);
 }
+
 .frame{
     display: flex;
     align-items: flex-start;
+}
+
+.mid{
+    display: flex;
+    justify-content: center;
+}
+.midCanv{
+    width: 400px;
+    height: 300px;
+    border: 1px,solid,black;
+    overflow:hidden;
+}
+.midPic{
+    width: 400px;
+    height: 300px;
+    display: flex;
+}
+.midButton{
+    width: 20px;
+    height: 100px;
+    transform: translate(0px,100px);
+}
+
+.map{
+    width: 666px;
+    height: 100%;
+    display: flex;
+   
+}
+.mapBox{
+    width: 666px;
+    height: min-content;
+    display: flex;
+    margin: auto;
+}
+.link{
+    display: flex;
+    width: min-content;
+    height: min-content;
+    transform: translate(-250px,0px);
+    background-color:rgba(0, 0, 0, 0);
+}
+.pin{
+    display: flex;
+    width: 25px;
+    height: 40px;  
 }
