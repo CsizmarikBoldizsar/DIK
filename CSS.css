@@ -73,15 +73,38 @@
     display: flex;
     margin: auto;
 }
-.link{
+.pinButton{
     display: flex;
     width: min-content;
     height: min-content;
-    transform: translate(-250px,0px);
     background-color:rgba(0, 0, 0, 0);
+    border: none;
+    transform: translate(-260px,0px);
 }
 .pin{
     display: flex;
     width: 25px;
     height: 40px;  
+}
+.pin:hover{
+    opacity: 80%;
+}
+.pinImageDiv{
+    width: 240px;
+    height: 1;
+    display: none;
+}
+.pinImage{
+    border: 1px solid rgb(100, 100, 100);
+    width: 240px;
+    height: 100%;
+}
+.pinLinkDiv{
+    transform: translate(0px, 20px);
+}
+.pinLink{
+    transform: translate(0px, 20px);
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
 }
