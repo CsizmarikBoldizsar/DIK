@@ -74,12 +74,12 @@
     margin: auto;
 }
 .pinButton{
-    display: flex;
+    display:flex;
+    position:absolute;
     width: min-content;
     height: min-content;
     background-color:rgba(0, 0, 0, 0);
     border: none;
-    transform: translate(-260px,0px);
 }
 .pin{
     display: flex;
@@ -103,8 +103,40 @@
     transform: translate(0px, 20px);
 }
 .pinLink{
-    transform: translate(0px, 20px);
     text-decoration: none;
     color: black;
     font-size: 14px;
+}
+@keyframes r {
+    0%{background-color: rgb(255, 110, 110);}
+    20%{background-color: rgb(255, 200, 111);}
+    40%{background-color: rgb(255, 255, 111);}
+    60%{background-color: rgb(130, 255, 130);}
+    80%{background-color: rgb(130, 130, 255);}
+    100%{background-color: rgb(255, 130, 255);}
+}
+@keyframes r2 {
+    0%{color: rgb(255, 110, 110);}
+    20%{color: rgb(255, 200, 111);}
+    40%{color: rgb(255, 255, 111);}
+    60%{color: rgb(130, 255, 130);}
+    80%{color: rgb(130, 130, 255);}
+    100%{color: rgb(255, 130, 255);}
+}
+.rain{
+    background-color: rgb(255, 110, 110);
+    animation-name: r;
+    animation-duration: 30s;
+    animation-timing-function:linear;
+    animation-direction:alternate;
+    animation-iteration-count: infinite;
+}
+.rainText{
+    text-shadow: 1px 1px 3px black;
+    color: rgb(255, 110, 110);
+    animation-name: r2;
+    animation-duration: 10s;
+    animation-timing-function:linear;
+    animation-direction:alternate;
+    animation-iteration-count: infinite;
 }
