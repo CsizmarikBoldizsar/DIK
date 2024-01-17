@@ -145,3 +145,14 @@
 a{
     text-decoration: none
 }
+
+.midPrice{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    transform: translate(0px,40px);
+}
+
+.altFrame{
+    transform: translate(100px,100px);
+}
