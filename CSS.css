@@ -65,8 +65,15 @@
     width: 666px;
     height: 100%;
     display: flex;
-   
 }
+div{
+    
+    user-select: none;
+  }
+  img{
+    pointer-events: none;
+
+  }
 .mapBox{
     width: 666px;
     height: min-content;
@@ -85,6 +92,7 @@
     display: flex;
     width: 25px;
     height: 40px;  
+    pointer-events: all;
 }
 .pin:hover{
     opacity: 80%;
@@ -154,5 +162,16 @@ a{
 }
 
 .altFrame{
-    transform: translate(100px,100px);
+    transform: translate(0px,100px);
+    width: min-content;
+    height: min-content;
+}
+.altDiv{
+    
+   display: flex;
+   justify-content: space-around; 
+}
+.dataDiv{
+    transform: translate(0px,100px);
+    font-size: 26px;
 }
