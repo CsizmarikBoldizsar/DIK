@@ -160,12 +160,6 @@ a{
     justify-content: center;
     transform: translate(0px,40px);
 }
-
-.altFrame{
-    transform: translate(0px,100px);
-    width: 500px;
-    height: 500px;
-}
 .altDiv{
     
    display: flex;
@@ -175,7 +169,6 @@ a{
    /*justify-content: space-around; */
 }
 .dataDiv{
-    transform: translate(0px,100px);
     font-size: 26px;
 }
 sup{
@@ -183,5 +176,23 @@ sup{
 }
 
 .border{
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0);
+    width: min-content;
+    height: min-content;
+    background-color: aliceblue;
+    border-radius: 3%;
+    margin: 15px;
+}
+.altFrame{
+    display: flex;
+    justify-content: center;
+}
+.bg{
+    display: flex; 
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 3%;
+    width: min-content;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 3%;
 }
