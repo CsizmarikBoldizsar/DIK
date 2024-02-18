@@ -1,0 +1,109 @@
+#imageContainer{
+    display: flex;
+    overflow: hidden;
+    border-radius: 8px;
+    align-items: start;
+    justify-items: left;
+}
+.img{
+    vertical-align: middle;
+    width: 300px;
+    pointer-events: all;
+}
+
+.imgDiv{
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 1px;
+}
+
+.image1{
+    width: 600px; 
+    height: 300px;
+}
+.image2{
+    width: 300px;
+    height: 150px;
+}
+.image3{
+    width: 300px;
+    height: 150px;
+}
+
+.images1{
+    display: flex;
+    justify-items: left;
+}
+
+.images2{
+    display: flex;
+    justify-items: left;
+}
+
+.images3{
+    display: block;
+}
+
+.details{
+    width: 90%;
+    border: 1px solid #6359856c;
+    border-radius: 8px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #FCF5EE;
+}
+
+table{
+    width: 80%;
+    margin: auto;
+}
+td{
+    text-align: center;
+    width: 20%;
+    font-size: 16px;
+    color:#18122B;
+}
+.cell3{
+    width: 33.33%;
+}
+
+strong{
+    font-size: 24px;
+}
+
+.contact{
+    padding: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.contactSegment{
+    background-color: #F54D42;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 24px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    margin: 12px;
+}
+.number{
+    display: flex;
+    align-items: center;
+    height: 34px;
+}
+
+.titleBox{
+    font-size: 32px;
+    color: #18122B;
+    margin-top: -15px;
+    font-weight:600;
+    display: flex;
+    justify-content: space-between;
+}
+sup{
+    font-size: 16px;
+}

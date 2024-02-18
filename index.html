@@ -3,93 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="CSS.css">
+    <title>Fort-estate</title>
+    <link rel="stylesheet" href="CSS1.css">
+    <link rel="icon" href="Images/Icons/icon.png">
 </head>
-<body>
-    <div class="title rainText">
-        Üdvözöljük!
-    </div>
-    
-    <div class="bg rain mid" style="width: 800px;">
-        <div class="">
-            <div class="" style="width: min-content; height: min-content;">
-                <div>
-                    <h2 style="text-align: center;">legjobb ajánlataink:</h2>
-                    <div class="border pad fit frame mid">
-                        <button class="midButton"id="b2">
-                            <
-                        </button>
-                        <div class="midCanv">
-                            <div id="box">
-                                <a href="Tengerparti villa.html" >
-                                    <div class="midPrice rainText">960 M Ft</div>
-                                    <img src="Photos/Tengerparti villa/Tengerparti villa.jpg" class="midPic">
-                                </a>
-                                <a href="">
-                                        <div class="midPrice rainText">54 M Ft</div>
-                                        <img src="Photos/Legény lakás.png" class="midPic">
-                                </a>
-                            </div>
-                        </div>
-                        <button class="midButton"id="b1">
-                            >
-                        </button>
-                    </div>
-                </div>
-            
-
-
-                <div style="height: 100px;"></div>
-
-                <div class="border pad">
-                    <div class="mapBox">
-                    <img src="Photos/map.jpg" alt="" class="map">
-
-                    <button class="pinButton" style="transform: translate(400px,0px);" ><img src="Photos/pin.png" alt="" class="pin">
-                        <div class="pinImageDiv">
-                            <a href="Tengerparti villa.html" class="pinLink">
-                                <div class="pinLinkDiv rainText">960 M Ft</div>
-                                <img src="Photos/Tengerparti villa/Tengerparti villa.jpg" alt="" class="pinImage">
-                            </a>
-
+<body style="height: fit-content;">
+    <header>
+        <a class="logo" href="index.html">
+            <img src="Images/Icons/icon.png" style="width: 34px;">
+            <div class="BoxText" style="align-items: end">
+                Fort-estate
+            </div> 
+        </a>
+    </header>
+    <div style="height: 100px;"></div>
+    <div class="mainDiv">
+        <div class="searchbox">
+                <input id="searchField" type="text" style="width: 90%; height: 34px;" class="BoxText segment" placeholder="Hol keres házat?">
+            <div class="dropDownPos" id="dropDown">
+                <div class="dropDown">                
+                    <button class="dropdownBtn">
+                        <div class="dropDownText">
+                            Shark Island
                         </div>
                     </button>
-
-                    <button class="pinButton" style="transform: translate(480px,450px);" ><img src="Photos/pin.png" alt="" class="pin">
-                        <div class="pinImageDiv">
-                            <a href="" class="pinLink">
-                                <div class="pinLinkDiv rainText">12 M Ft</div>
-                                <img src="Photos/Megy a fűttés.webp" alt="" class="pinImage">
-                            </a>
-
+                    <button class="dropdownBtn">
+                        <div class="dropDownText">
+                            Cloistered Castle
                         </div>
                     </button>
-
-                    <button class="pinButton" style="transform: translate(90px,200px);" ><img src="Photos/pin.png" alt="" class="pin">
-                        <div class="pinImageDiv">
-                            <a href="" class="pinLink">
-                                <div class="pinLinkDiv rainText">4 M Ft</div>
-                                <img src="Photos/DOg house/DOg house 2.webp" alt="" class="pinImage">
-                            </a>
-
+                    <button class="dropdownBtn">
+                        <div class="dropDownText">
+                            Lil Villa
                         </div>
                     </button>
-
-                    <button class="pinButton" style="transform: translate(360px,400px);" ><img src="Photos/pin.png" alt="" class="pin">
-                        <div class="pinImageDiv">
-                            <a href="" class="pinLink">
-                                <div class="pinLinkDiv rainText">26 M Ft</div>
-                                <img src="Photos/Legény lakás.png" alt="" class="pinImage">
-                            </a>
-
+                    <button class="dropdownBtn">
+                        <div class="dropDownText">
+                            Choppin Chateau
                         </div>
                     </button>
                 </div>
             </div>
+
+
+            <div class="front">
+                
+                    <button class="searchBtnBtn" id="sBtn" >
+                        <div class="searchBtn">
+                            <img src="Images/Icons/searchicon.png" style="height: 34px;width: 34px;">
+                        </div>
+                    </button> 
+
+
+            </div>
         </div>
-        <div style="height: 100px;"></div>
-    </div>   
+            <a href="#map">
+                <div class="mapBtn">
+                    <img src="Images/Icons/mapicon.png" style="height: 34px;width: 34px;">
+                    <div class="BoxText">Térkép</div>
+                </div>
+            </a>
+
+    </div>
+
+    <div style="display: flex;justify-content: center;">
+        <div class="resultsInfo">
+            Eladó lakások
+            <div id="resultNumber" style="font-size: 16px;">
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainDiv">
+        <div class="shadowBox" id="results">
+
+                <a class="border" href="SharkIsland.html">
+                    <img src="Images/SharkIsland/sharkisland (4).png" class="resultImage">
+                    <div class="resultText">
+                        <strong class="price">960 M Ft</strong>
+                        <br>
+                        <div class="locationText">
+                            <div style="display: none;">Shark island,northwest,sweaty sands,island,északkelet,sziget,Lockies Lighthouse,Lockies,Lighthouse,shore,coast,part</div>
+                            <div class="loc">Shark island, nyugatra Lockie's Lighthouse-tól</div>
+                        </div>
+                        <table>
+                            <tr>
+                                <td class="line">
+                                    Alapterület
+                                </td>
+                                <td>
+                                    Szobák száma
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="line">
+                                    <strong>400m<sup>2</sup></strong>
+                                </td>
+                                <td>
+                                    <strong>6</strong>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+            
+                <a class="border" href="CloisteredCastle.html">
+                    <img src="Images/CloisteredCastle/CloisteredCastle (5).png" class="resultImage">
+                    <div class="resultText">
+                        <strong class="price">700 M Ft</strong> <br>
+                        <div class="locationText">
+                            <div style="display: none;">Cloistered Castle,észak,north,sziget,island,zipline,kastély,castle</div>
+                            <div class="loc">Cloistered Castle, északkeletre Lavish Lair-től</div>
+                        </div>
+                        <table>
+                            <tr>
+                                <td class="line">
+                                    Alapterület
+                                </td>
+                                <td>
+                                    Szobák száma
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="line">
+                                    <strong>45m<sup>2</sup></strong>
+                                </td>
+                                <td>
+                                    <strong>4</strong>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+
+                <a class="border" href="LilVilla.html">
+                    <img src="Images/LilVilla/LilVilla (5).png" class="resultImage">
+                    <div class="resultText">
+                        <strong class="price">420 M Ft</strong> <br>
+                        <div class="locationText">
+                            <div style="display: none;">Lil Villa,middle,közép,Fencing Fields,villa</div>
+                            <div class="loc">Lil Villa, keletre Fencing Fields-től</div>
+                        </div>
+                        <table>
+                            <tr>
+                                <td class="line">
+                                    Alapterület
+                                </td>
+                                <td>
+                                    Szobák száma
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="line">
+                                    <strong>125m<sup>2</sup></strong>
+                                </td>
+                                <td>
+                                    <strong>3</strong>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+
+                <a class="border" href="ChoppinChateau.html">
+                    <img src="Images/ChoppinChateau/ChoppinChateau (3).png" class="resultImage">
+                    <div class="resultText">
+                        <strong class="price">44 M Ft</strong> <br>
+                        <div class="locationText">
+                            <div style="display: none;">Choppin Chateau,Logjam Lumberyard,north,észak,fenyő,pinetree</div>
+                            <div class="loc">Choppin Chateau, északra Logjam Lumberyard-tól</div>
+                        </div>
+                        <table>
+                            <tr>
+                                <td class="line">
+                                    Alapterület
+                                </td>
+                                <td>
+                                    Szobák száma
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="line">
+                                    <strong>12m<sup>2</sup></strong>
+                                </td>
+                                <td>
+                                    <strong>1</strong>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+            
+
+        </div>
+    </div>
+
+    <button id="exit">
+        <div class="exit">
+
+        </div>
+    </button>
+
+
 </body>
+
 </html>
-<script src="JS.js"></script>
+<script src="JS1.js"></script>
+
