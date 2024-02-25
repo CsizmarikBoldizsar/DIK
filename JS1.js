@@ -7,7 +7,7 @@ var results = document.getElementById("results")
 var shownResuts = []
 var resultNumber = document.getElementById("resultNumber")
 
-
+var focused = false 
 
 function showResults(){
     for (let i = 0; i < results.children.length; i++) {
@@ -28,12 +28,26 @@ function showAll(){
 sField.onfocus= function(){
     dDown.style.display = "flex"
     exitbtn.style.display = "flex"
+    focused = true 
 }
 
 exitbtn.onclick = function(){
     dDown.style.display = "none"
     exitbtn.style.display = "none"
+    focused = false 
 }
+
+document.onkeydown = function(event){
+    if (focused == true){
+        if (event.key == "Enter"){
+            event.preventDefault();
+            sbtn.click()
+        }
+    }
+}
+
+
+
 
 sbtn.onclick = function(){
     if (sField.value == ""){
@@ -41,35 +55,55 @@ sbtn.onclick = function(){
         return
     }
     
+
     keyWords = sField.value.toLowerCase().split(",")
     if (keyWords[keyWords.length-1] == ""){
         keyWords.splice(keyWords.length-1,1)
     }
 
-    resultKeyWords = []
-
-
     shownResuts = []
     for (let n = 0; n < keyWords.length; n++) {
         for (let i = 0; i < results.children.length; i++) {
-            resultKeyWords = results.children[i].children[1].children[2].children[0].innerHTML.toLowerCase().split(",")
-            for (let x = 0; x < resultKeyWords.length; x++) {
-                if (resultKeyWords[x].trimStart().trimEnd().replace(" ","") == keyWords[n].trimStart().trimEnd().replace(" ","")){
-                    shownResuts.push(results.children[i])
-                }
+            resultext = results.children[i].children[1].children[2].children[0].innerHTML.toLowerCase()
+            if (resultext.trimStart().trimEnd().replace(" ","").search(keyWords[n].trimStart().trimEnd().replace(" ","")) >= 0){
+                shownResuts.push(results.children[i])
             }
         }
     }
 
-    resultNumber.innerHTML = shownResuts.length+" találat"
-    showResults()
-    dDown.style.display = "none"
-    exitbtn.style.display = "none"
+
+    //keyWords = sField.value.toLowerCase().split(",")
+    //if (keyWords[keyWords.length-1] == ""){
+    //    keyWords.splice(keyWords.length-1,1)
+    //}
+
+    //resultKeyWords = []
+
+
+    //shownResuts = []
+    //for (let n = 0; n < keyWords.length; n++) {
+   //     for (let i = 0; i < results.children.length; i++) {
+   //         resultKeyWords = results.children[i].children[1].children[2].children[0].innerHTML.toLowerCase().split(",")
+   //         for (let x = 0; x < resultKeyWords.length; x++) {
+   //             if (resultKeyWords[x].trimStart().trimEnd().replace(" ","") == keyWords[n].trimStart().trimEnd().replace(" ","")){
+   //                 shownResuts.push(results.children[i])
+   //             }
+   //         }
+   //     }
+   // }
+
+   resultNumber.innerHTML = shownResuts.length+" találat"
+   showResults()
+   dDown.style.display = "none"
+   exitbtn.style.display = "none"
 }
 
 
 for (let i = 0; i < ddbtn.length; i++) {
     ddbtn.item(i).addEventListener("click", function(){
-        sField.value += ddbtn.item(i).children.item(0).innerHTML.trimStart().trimEnd() + ", "
+        if (!(sField.value == "")){
+            sField.value += ", "
+        }
+        sField.value += ddbtn.item(i).children.item(0).innerHTML.trimStart().trimEnd()
     });
 }

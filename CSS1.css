@@ -5,12 +5,14 @@ header{
     display: flex;
     width: 100%;
     height: min-content;
-    padding: 10px;
+    padding: 18px;
     background-color: #FCF5EE;
     z-index: 100;
+    padding-bottom: 10px;
 }
 body{
     background-color: #FCF5EE;
+    margin: 0%;
 }
 
 .mainDiv{
@@ -169,14 +171,15 @@ a:any-link{
 .dropDownText{
     width: max-content;
     height: min-content;
-    background-color: #F5F5F5;
+    background-color: #00000000;
     color: #18122B;
     margin: 0%;
     width: 130px;
     text-align: left;
+    user-select: none;
 }
 
-.dropDownText:hover{
+.dropdownBtn:hover{
     background-color: #F0DECB;
     cursor: pointer;
 }
@@ -189,6 +192,8 @@ a:any-link{
     margin-bottom: 3px;
     margin-top: 3px;
     width: 130px;
+    user-select: none;
+    
 }
 
 .dropDown{
