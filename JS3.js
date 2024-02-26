@@ -38,7 +38,7 @@ for (let i = 0; i < pins.length; i++) {
     pins.item(i).addEventListener("click", function(){
         if (this.parentElement.children[1].style.display == "block"){
             this.parentElement.children[1].style.display = "none"
-            this.children[0].src = "Images/Icons/mapIcon.png"
+            this.children[0].src = "Images/Icons/mapicon.png"
         }
         else{
             this.parentElement.children[1].style.display = "block"
