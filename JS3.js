@@ -42,7 +42,7 @@ for (let i = 0; i < pins.length; i++) {
         }
         else{
             this.parentElement.children[1].style.display = "block"
-            this.children[0].src = "Images/Icons/pinIcon.png"
+            this.children[0].src = "Images/Icons/pinicon.png"
         }
     });
 }
