@@ -4,10 +4,11 @@
     border-radius: 8px;
     align-items: start;
     justify-items: left;
+    width: 100%;
 }
 .img{
     vertical-align: middle;
-    width: 300px;
+    width: 100%;
     pointer-events: all;
 }
 
@@ -16,33 +17,39 @@
     border-radius: 8px;
     margin: 1px;
 }
-
 .image1{
-    width: 600px; 
-    height: 300px;
+    width: 100%; 
+    height: min-content;
 }
 .image2{
-    width: 300px;
-    height: 150px;
+    display: flex;
+    justify-content: left;
+    width: 50%; 
+    height: min-content;
 }
 .image3{
-    width: 300px;
-    height: 150px;
+    width: 100%;
+    height: min-content;
 }
-
 .images1{
-    display: flex;
-    justify-items: left;
+    width: calc((2%/3)*100);
 }
-
 .images2{
     display: flex;
-    justify-items: left;
 }
-
 .images3{
     display: block;
+    width: calc((1%/3)*100);
+    height: min-content;
 }
+
+.shadowBox{
+    width: 35%;
+    height: min-content;
+    padding: 20px;
+    min-width: 0%;
+    transition-duration: 1s;
+}  
 
 .details{
     width: 90%;
@@ -61,7 +68,7 @@ table{
 td{
     text-align: center;
     width: 20%;
-    font-size: 16px;
+    font-size: min(2.2vw, 16px);
     color:#18122B;
 }
 .cell3{
@@ -69,41 +76,123 @@ td{
 }
 
 strong{
-    font-size: 24px;
+    font-size: min(2.2vw, 24px);
 }
+
 
 .contact{
-    padding: 50px;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 5vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
     text-align: center;
-    font-size: 22px;
+    width: 15%;
+    transition-duration: 0s;
 }
-
+.contactTitle{
+    font-size: min(2.5vw, 22px);
+}
 .contactSegment{
     background-color: #F54D42;
     padding: 12px;
     border-radius: 8px;
-    font-size: 24px;
-    height: 34px;
+    height: min(2.5vw, 34px);
     display: flex;
     justify-content: center;
     margin: 12px;
+    align-items: center;
+    width: calc(100% - 24px);
+    margin-right: auto;
+    margin-left: auto;
 }
 .number{
     display: flex;
     align-items: center;
     height: 34px;
+    font-size: min(2.3vw, 24px);
+}
+
+.contactIcon{
+    width: min(2.2vw, 34px);
+    margin-right: 0.5vw;
+    height: min-content;
 }
 
 .titleBox{
-    font-size: 32px;
+
     color: #18122B;
     margin-top: -15px;
-    font-weight:600;
+    
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 sup{
-    font-size: 16px;
+    font-size: min(1.8vw, 16px);
+}
+ 
+.title{
+    font-size: min(2.2vw, 34px);
+
+    display: flex;
+    width: calc(60% - 24px);
+    height: min-content;
+    align-items: center;
+    min-width: 0%;
+    font-weight:600;
+}
+.mapBtn2{
+    width: min(9vw,120px);
+    height: min-content;
+    display: flex;
+    margin: auto;
+    margin-right: 0%;
+    padding: 10%;
+    border-radius: 8px;
+    background-color: #F54D42;
+    align-items: center;
+}
+.mapLink{
+    display: flex;
+    width: calc(20% + 24px);
+    min-width: 0%;
+    justify-content: center;
+    justify-items: center;
+    margin: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+.MapBoxText{
+    width: min(calc(70% * 1vw), 28px);
+    height: min-content;
+    font-size: min(2.2vw, 28px);
+    font-size: min(calc(70% * 1vw), 28px);
+}
+
+.mapIcon{
+    width: min(2.2vw, 34px);
+    height: min-content;
+}
+
+.mainDiv{
+    justify-content: center;
+}
+
+.space{
+    height: min(1.4vw, 20px);
+}
+
+@media screen and (max-width: 1700px) {
+    .shadowBox{
+        width: 65%;
+        margin: auto;
+        margin-bottom: 24px;
+    }
+    .contact{
+        width: 35%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .mainDiv{
+        display: block;
+    }
 }
