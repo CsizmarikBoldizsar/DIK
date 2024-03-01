@@ -1,2 +1,2 @@
 var file = fetch('file.json')
-console.log(file.text)
+console.log(file)
