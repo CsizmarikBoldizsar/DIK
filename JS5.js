@@ -2,6 +2,7 @@
 window.onload = function(){
   var resultsChildren = document.getElementById("results").children    
   for(let i = 0; i < resultsChildren.length; i++){
+    console.log("-------------------------------")
     var c = resultsChildren.item(i)    
     c.href = c.id+".html"
   
@@ -13,10 +14,13 @@ window.onload = function(){
 
     console.log("path--- ",path)
     console.log("imgPath--- ",imgPath)
-    
+
     fetch(path)
     .then(response => response.text())
     .then((data) => {      
+
+      console.log("data--- ",data)
+    
       var splitData = data.split("\n")
       c.children[0].src = imgPath+splitData[splitData.indexOf("-img")+1]+").png"      
       c.children[1].children[0].innerHTML = splitData[1]+" M Ft"
@@ -27,6 +31,7 @@ window.onload = function(){
       t.children[0].children[0].innerHTML = splitData[2]+"m<sup>2</sup>"
       t.children[1].children[0].innerHTML = splitData[3]
     })
+    console.log("-------------------------------")
   }
   
 }
