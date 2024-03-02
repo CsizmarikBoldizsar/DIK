@@ -16,3 +16,4 @@ Floor Loot
 2
 4
 -search
+Cloistered Castle,észak,north,sziget,island,zipline,kastély,castle

@@ -26,3 +26,8 @@ for(let i = 1; i < results.length; i++){
 
 
 
+fetch("Details/file.txt")
+  .then(response => response.text())
+  .then((data) => {
+    console.log(data)
+  })
