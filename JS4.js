@@ -16,11 +16,11 @@ fetch(path)
   .then(response => response.text())
   .then((data) => {
     console.log(data)
-    splitData = data.split("\n")
+    var splitData = data.split("\n")
 
     title.innerHTML = splitData[0]
     price.innerHTML = splitData[1]+" M Ft"
-    size.innerHTML = splitData[2]+"m"
+    size.innerHTML = splitData[2]+"m<sup>2</sup>"
     rooms.innerHTML = splitData[3]
     splitData.splice(0,4)
 
@@ -35,6 +35,9 @@ fetch(path)
     console.log("--2--")
     console.log(images)
     for (let i = 0; i < images.length; i++){
+      if (splitData[i] == "-search"){
+        break;
+      }
       console.log("--2.x--")
       console.log(imgPath+splitData[i]+").png")
       images[i].src = imgPath+splitData[i]+").png"

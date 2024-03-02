@@ -15,3 +15,4 @@ Floor Loot
 6
 2
 4
+-search

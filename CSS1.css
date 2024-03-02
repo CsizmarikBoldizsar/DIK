@@ -286,7 +286,7 @@ body{
     .resultText{
         height: min-content;
         width: calc(100% - 30px);
-        
+        display: block;
     }
     .resultImage{
         width: 100%;

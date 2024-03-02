@@ -1,6 +1,6 @@
 Shark island, nyugatra Lockie's Lighthouse-tól
 960
-500
+400
 6
 Chests
 16
@@ -11,3 +11,5 @@ Chests
 2
 5
 7
+-search
+Shark island,northwest,sweaty sands,island,északkelet,sziget,Lockies Lighthouse,Lockies,Lighthouse,shore,coast,part
