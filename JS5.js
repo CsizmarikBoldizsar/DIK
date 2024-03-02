@@ -5,6 +5,7 @@ window.onload = function(){
     var c = resultsChildren.item(i)    
     c.href = c.id+".html"
   
+    console.log("resultsChildren--- ",resultsChildren)
     console.log("c--- ",c)
 
     var path = "Details/"+c.id.toLowerCase() + ".txt"
