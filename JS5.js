@@ -1,8 +1,8 @@
 
-var resultsChildren = document.getElementById("results").children
-
-document.onload = function(){
+window.onload = function(){
+  var resultsChildren = document.getElementById("results").children
   console.log(resultsChildren)
+  console.log("lloaded")
   for(let i = 1; i < resultsChildren.length; i++){
     console.log(resultsChildren[i].id)
     var c = resultsChildren.item(i)
