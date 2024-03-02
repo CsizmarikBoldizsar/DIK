@@ -1,7 +1,7 @@
 
 window.onload = function(){
   var resultsChildren = document.getElementById("results").children    
-  for(let i = 1; i < resultsChildren.length; i++){
+  for(let i = 0; i < resultsChildren.length; i++){
     var c = resultsChildren.item(i)    
     c.href = c.id+".html"
   
