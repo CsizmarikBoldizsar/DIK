@@ -23,17 +23,18 @@ fetch(path)
     size.innerHTML = splitData[2]+"m"
     rooms.innerHTML = splitData[3]
     splitData.splice(0,4)
+
+    for (let i = 0; i < splitData.lenght; i+=2){
+      if (splitData[i] == "-img"){
+        splitData.splice(0,i)
+        break;
+      }
+      otherNames.innerHTML += "<td>"+splitData[i]+"</td>"
+      otherNames.innerHTML += "<td><strong>"+splitData[i+1]+"</strong></td>"
+    }
+    console.log("--2--")
+    for (let i = 0; i < images.lenght; i++){
+      images[i].src = imgPath+splitData[i]+").png"
+    }
   })
 
-for (let i = 0; i < splitData.lenght; i+=2){
-  if (splitData[i] == "-img"){
-    splitData.splice(0,i)
-    break;
-  }
-  otherNames.innerHTML += "<td>"+splitData[i]+"</td>"
-  otherNames.innerHTML += "<td><strong>"+splitData[i+1]+"</strong></td>"
-}
-
-for (let i = 0; i < images.lenght; i++){
-  images[i].src = imgPath+splitData[i]+").png"
-}
