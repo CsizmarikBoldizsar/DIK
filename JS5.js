@@ -1,10 +1,10 @@
 
-var results = document.getElementById("results").children
+var resultsChildren = document.getElementById("results").children
 
 
-for(let i = 1; i < results.length; i++){
-  console.log(results[i].id)
-  var c = results[i]
+for(let i = 1; i < resultsChildren.length; i++){
+  console.log(resultsChildren[i].id)
+  var c = resultsChildren[i]
   c.href = c.id+".html"
 
   var path = "Details/"+c.id.toLowerCase() + ".txt"

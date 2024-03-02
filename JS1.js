@@ -7,6 +7,8 @@ var results = document.getElementById("results")
 var shownResuts = []
 var resultNumber = document.getElementById("resultNumber")
 
+console.log(results)
+
 var focused = false 
 
 function showResults(){
