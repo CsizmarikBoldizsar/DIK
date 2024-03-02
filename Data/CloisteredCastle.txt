@@ -1,0 +1,17 @@
+Cloistered Castle, északkeletre Lavish Lair-től
+700
+45
+4
+Chests
+8
+Ammo Boxes
+15
+Floor Loot
+18
+-img
+5
+3
+1
+6
+2
+4

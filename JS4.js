@@ -1,4 +1,4 @@
-var path = document.title.replace(" ","").toLowerCase() + ".txt"
+var path = "Data/"+document.title.replace(" ","").toLowerCase() + ".txt"
 var imgPath = "Images/"+document.title.replace(" ","")+"/"+document.title.replace(" ","")+" ("
 
 var images = document.getElementsByClassName("img")

@@ -1,0 +1,12 @@
+Lil Villa, keletre Fencing Fields-től
+420
+125
+3
+Chests
+11
+Ammo Boxes
+15
+Floor Loot
+21
+Produce Boxes
+2

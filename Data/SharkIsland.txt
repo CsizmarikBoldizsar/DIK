@@ -1,0 +1,13 @@
+Shark island, nyugatra Lockie's Lighthouse-tól
+960
+500
+6
+Chests
+16
+-img
+4
+3
+1
+2
+5
+7
