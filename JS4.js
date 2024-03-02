@@ -1,5 +1,5 @@
 var path = document.title.replace(" ","").toLowerCase() + ".txt"
-var imgPath = "Images/"+document.title.replace(" ","")+document.title.replace(" ","")+" ("
+var imgPath = "Images/"+document.title.replace(" ","")+"/"+document.title.replace(" ","")+" ("
 
 var images = document.getElementsByClassName("img")
 
@@ -30,7 +30,7 @@ fetch(path)
         break;
       }
       otherNames.innerHTML += "<td>"+splitData[i]+"</td>"
-      otherNames.innerHTML += "<td><strong>"+splitData[i+1]+"</strong></td>"
+      otherValues.innerHTML += "<td><strong>"+splitData[i+1]+"</strong></td>"
     }
     console.log("--2--")
     console.log(images)
