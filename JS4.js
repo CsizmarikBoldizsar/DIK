@@ -24,7 +24,7 @@ fetch(path)
     rooms.innerHTML = splitData[3]
     splitData.splice(0,4)
 
-    for (let i = 0; i < splitData.lenght; i+=2){
+    for (let i = 0; i < splitData.length; i+=2){
       if (splitData[i] == "-img"){
         splitData.splice(0,i)
         break;
@@ -34,7 +34,7 @@ fetch(path)
     }
     console.log("--2--")
     console.log(images)
-    for (let i = 0; i < images.lenght; i++){
+    for (let i = 0; i < images.length; i++){
       console.log("--2.x--")
       console.log(imgPath+splitData[i]+").png")
       images[i].src = imgPath+splitData[i]+").png"
