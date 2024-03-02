@@ -33,7 +33,10 @@ fetch(path)
       otherNames.innerHTML += "<td><strong>"+splitData[i+1]+"</strong></td>"
     }
     console.log("--2--")
+    console.log(images)
     for (let i = 0; i < images.lenght; i++){
+      console.log("--2.x--")
+      console.log(imgPath+splitData[i]+").png")
       images[i].src = imgPath+splitData[i]+").png"
     }
   })
