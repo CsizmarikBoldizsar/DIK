@@ -1,7 +1,7 @@
 
 var resultsChildren = document.getElementById("results").children
 
-document.onload() = function(){
+document.onload = function(){
   console.log(resultsChildren)
   for(let i = 1; i < resultsChildren.length; i++){
     console.log(resultsChildren[i].id)
