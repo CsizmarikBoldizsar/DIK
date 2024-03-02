@@ -9,7 +9,11 @@ window.onload = function(){
     console.log("c--- ",c)
 
     var path = "Details/"+c.id.toLowerCase() + ".txt"
-    var imgPath = "Images/"+c.id+"/"+c.id+" ("        
+    var imgPath = "Images/"+c.id+"/"+c.id+" ("
+
+    console.log("path--- ",path)
+    console.log("imgPath--- ",imgPath)
+    
     fetch(path)
     .then(response => response.text())
     .then((data) => {      
