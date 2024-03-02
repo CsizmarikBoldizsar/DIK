@@ -1,7 +1,7 @@
 
 window.onload = function(){
   var resultsChildren = document.getElementById("results").children
-  
+  console.log("resultsChildren--- ",resultsChildren)
   
   for(let i = 0; i < resultsChildren.length; i++){
 
@@ -10,7 +10,6 @@ window.onload = function(){
     var c = resultsChildren.item(i)
     c.href = c.id+".html"
   
-    console.log("resultsChildren--- ",resultsChildren)
     console.log("c--- ",c)
 
     var path = "Details/"+c.id.toLowerCase() + ".txt"
