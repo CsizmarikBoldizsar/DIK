@@ -7,7 +7,7 @@ for(let i = 1; i < results.length; i++){
   var c = results[i]
   c.href = c.id+".html"
 
-  var path = "Data/"+c.id.toLowerCase() + ".txt"
+  var path = c.id.toLowerCase() + ".txt"
   var imgPath = "Images/"+c.id+"/"+c.id+" ("
   fetch(path)
   .then(response => response.text())
