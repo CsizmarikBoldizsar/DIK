@@ -26,7 +26,7 @@ fetch(path)
 
     for (let i = 0; i < splitData.length; i+=2){
       if (splitData[i] == "-img"){
-        splitData.splice(0,i)
+        splitData.splice(0,i+1)
         break;
       }
       otherNames.innerHTML += "<td>"+splitData[i]+"</td>"
