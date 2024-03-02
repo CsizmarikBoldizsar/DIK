@@ -3,7 +3,7 @@ window.onload = function(){
   var resultsChildren = document.getElementById("results").children
   console.log("resultsChildren--- ",resultsChildren)
   
-  for(let i = 0; i < resultsChildren.length; i++){
+  for(let i = 0; i < 1; i++){
 
     console.log("-------------------------------")
 
