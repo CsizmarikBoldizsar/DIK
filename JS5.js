@@ -9,6 +9,8 @@ for(let i = 1; i < resultsChildren.length; i++){
 
   var path = "Details/"+c.id.toLowerCase() + ".txt"
   var imgPath = "Images/"+c.id+"/"+c.id+" ("
+  console.log(c.id)
+  console.log(imgPath)
   fetch(path)
   .then(response => response.text())
   .then((data) => {
