@@ -18,6 +18,12 @@ window.onload = function(){
     console.log("path--- ",path)
     console.log("imgPath--- ",imgPath)
 
+    
+    setTimeout(function(){
+      console.log("waiting")
+    }, 2000);
+  
+
     fetch(path)
     .then(response => response.text())
     .then((data) => {      
