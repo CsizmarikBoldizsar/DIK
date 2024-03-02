@@ -1,3 +1,70 @@
+
+header{
+    position: fixed;
+    transform: translate(-8px,-10px);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    width: 100%;
+    height: min-content;
+    padding: 18px;
+    background-color: #FCF5EE;
+    z-index: 100;
+    padding-bottom: 10px;
+}
+body{
+    background-color: #FCF5EE;
+    margin: 0%;
+}
+
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.border{
+    display: flex;
+    height: 150px;
+    width: 95%;
+    border: 1px solid #635985;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    justify-content: left;  
+    background-color: #FCF5EE; 
+    min-width: fit-content;
+}
+.logo{
+    display: flex;
+    justify-content: left;
+}
+.BoxText{
+    display: flex;
+    align-items: center;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+}
+a:any-link{
+    text-decoration: none;
+    color: #18122B;
+}
+
+.shadowBox{
+    border-radius: 8px;
+    border: 1px solid #6359856c;
+    padding: 12px;
+    display: block;
+    min-width: 0px;
+    height: min-content;
+    width: 650px;
+    background-color: #F5F5F5;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 #imageContainer{
     display: flex;
     overflow: hidden;
@@ -44,11 +111,11 @@
 }
 
 .shadowBox{
-    width: 35%;
+    width: 900px;
     height: min-content;
     padding: 20px;
-    min-width: 0%;
-    transition-duration: 1s;
+    transition-duration: 0s;
+    min-width: 900px;
 }  
 
 .details{
@@ -63,12 +130,13 @@
 
 table{
     width: 80%;
+
     margin: auto;
 }
 td{
     text-align: center;
     width: 20%;
-    font-size: min(2.2vw, 16px);
+    font-size: 16px;
     color:#18122B;
 }
 .cell3{
@@ -76,26 +144,27 @@ td{
 }
 
 strong{
-    font-size: min(2.2vw, 24px);
+    font-size: 24px;
 }
 
 
 .contact{
-    padding: 5vw;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
-    width: 15%;
+    width: 300px;
     transition-duration: 0s;
+    min-width: 300px;
 }
 .contactTitle{
-    font-size: min(2.5vw, 22px);
+    font-size: 22px;
 }
 .contactSegment{
     background-color: #F54D42;
     padding: 12px;
     border-radius: 8px;
-    height: min(2.5vw, 34px);
+    height: 34px;
     display: flex;
     justify-content: center;
     margin: 12px;
@@ -107,13 +176,13 @@ strong{
 .number{
     display: flex;
     align-items: center;
-    height: 34px;
-    font-size: min(2.3vw, 24px);
+    height: fit-content;
+    font-size: 24px;
 }
 
 .contactIcon{
-    width: min(2.2vw, 34px);
-    margin-right: 0.5vw;
+    width: 34px;
+    margin-right: 5px;
     height: min-content;
 }
 
@@ -127,21 +196,20 @@ strong{
     width: 100%;
 }
 sup{
-    font-size: min(1.8vw, 16px);
+    font-size: 16px;
 }
  
 .title{
-    font-size: min(2.2vw, 34px);
+    font-size: 34px;
 
     display: flex;
     width: calc(60% - 24px);
     height: min-content;
     align-items: center;
-    min-width: 0%;
     font-weight:600;
 }
 .mapBtn2{
-    width: min(9vw,120px);
+    width: 120px;
     height: min-content;
     display: flex;
     margin: auto;
@@ -154,7 +222,6 @@ sup{
 .mapLink{
     display: flex;
     width: calc(20% + 24px);
-    min-width: 0%;
     justify-content: center;
     justify-items: center;
     margin: 0%;
@@ -162,14 +229,14 @@ sup{
     margin-bottom: 0%;
 }
 .MapBoxText{
-    width: min(calc(70% * 1vw), 28px);
+    width: 28px;
     height: min-content;
-    font-size: min(2.2vw, 28px);
-    font-size: min(calc(70% * 1vw), 28px);
+    font-size: 28px;
+    font-size: 28px;
 }
 
 .mapIcon{
-    width: min(2.2vw, 34px);
+    width: 34px;
     height: min-content;
 }
 
@@ -178,21 +245,67 @@ sup{
 }
 
 .space{
-    height: min(1.4vw, 20px);
+    height: 20px;
 }
-
-@media screen and (max-width: 1700px) {
+html{
+    width: 100%;
+}
+@media screen and (max-width: 1300px) {
     .shadowBox{
-        width: 65%;
+        width: 90%;
         margin: auto;
-        margin-bottom: 24px;
+        margin-bottom: min(2vw, 24px);
+        min-width: 0px;
     }
     .contact{
         width: 35%;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        min-width: 0%;
+        padding: 5vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        margin: auto;
     }
     .mainDiv{
         display: block;
+        min-width: 0px;
+    }
+    td{
+        font-size: min(2.2vw, 16px);
+    }
+    strong{
+        font-size: min(2.2vw, 24px);
+    }
+    .contactTitle{
+        font-size: min(2.5vw, 22px);
+    }
+    .number{
+        font-size: min(2.3vw, 24px);
+    }
+    .contactIcon{
+        width: min(2.2vw, 34px);
+        margin-right: 0.5vw;
+    }
+    .contactSegment{
+        height: min(2.3vw, 34px);
+    }
+    sup{
+        font-size: min(1.8vw, 16px);
+    }
+    .title{
+        font-size: min(2.2vw, 34px);
+    }
+    .mapBtn2{
+        width: min(9vw,120px);
+    }
+    .MapBoxText{
+        width: min(calc(70% * 1vw), 28px);
+        height: min-content;
+        font-size: min(2.5vw, 28px);
+    }
+    .mapIcon{
+        width: min(2.2vw, 34px);
+    }
+    .space{
+        height: min(1.4vw, 20px);
     }
 }

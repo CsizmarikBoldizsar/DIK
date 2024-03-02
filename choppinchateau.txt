@@ -1,0 +1,15 @@
+Choppin Chateau, északra Logjam Lumberyard-tól
+44
+12
+1
+Chests
+2
+Ammo Boxes
+2
+-img
+3
+2
+4
+1
+5
+6
