@@ -14,7 +14,7 @@ for(let i = 1; i < results.length; i++){
   .then((data) => {
     console.log(data)
     var splitData = data.split("\n")
-    c.children[0].src = imgPath+splitData[splitData.findIndex("-img")+1]+").png"
+    c.children[0].src = imgPath+splitData[splitData.indexOf("-img")+1]+").png"
     c.children[1].children[0].innerHTML = splitData[1]+" M Ft"
     c.children[1].children[2].children[0].innerHTML = splitData[-1]
     c.children[1].children[2].children[1].innerHTML = splitData[0]
@@ -23,11 +23,3 @@ for(let i = 1; i < results.length; i++){
     t.children[1].children[0].innerHTML = splitData[3]
   })
 }
-
-
-
-fetch("Details/file.txt")
-  .then(response => response.text())
-  .then((data) => {
-    console.log(data)
-  })
