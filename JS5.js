@@ -39,7 +39,7 @@ window.onload = function(){
       //console.log(dataTable)
 
       //for(let i = 0; i < resultsChildren.length; i++){
-        console.log("-------------------------------")
+        //console.log("-------------------------------")
         var c = resultsChildren.item(i)
         c.href = c.id+".html"
         //console.log("c--- ",c)
