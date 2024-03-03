@@ -13,7 +13,7 @@ for (let i = 0; i < img.length; i++) {
         clone.height = img[i].height
 
         img[i].style.opacity = "0%"
-        
+        img[i].id = "ZOOMED"
 
         clone.style.transform = "translate(0px,-"+clone.height+"px)"
 

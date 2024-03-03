@@ -24,7 +24,8 @@ window.onload = function(){
         
         var r = c.children[1]
 
-        r.children[0].scr = imgPaths[i]+splitData[splitData.indexOf("-img")+1]+").png"
+        r.children[0].src = imgPaths[i]+splitData[splitData.indexOf("-img")+1]+").png"
+        r.href = c.id+".html"
 
         var t = r.children[2].children[0]
         console.log("t----",t)
