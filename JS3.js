@@ -3,6 +3,7 @@ var map = document.getElementById("mapDiv")
 var smol = false
 var pins = document.getElementsByClassName("pinBtn")
 
+
 console.log(document.location.hash)
 console.log(!(document.location.hash == ""))
 window.onload = function(){
@@ -18,23 +19,38 @@ window.onload = function(){
 
 
 
-
-
+function minI(){
+    resizeBtn.style.backgroundImage = "url(Images/Icons/minIcon.png)"
+}
+function maxI(){
+    resizeBtn.style.backgroundImage = "url(Images/Icons/maxIcon.png)"
+}
 resizeBtn.onclick = function(){
     if(smol){
+        if (window.innerHeight > window.innerWidth){
+            maxI()
+        }
+        else{
+            minI()
+        }
         console.log("click")
-        map.style.transitionDuration = "1s"
+        map.style.transitionDuration = "0.7s"
         map.style.width = "100%"
-        resizeBtn.style.backgroundImage = "url(Images/Icons/minIcon.png)"
+        map.style.minWidth = "100%"
         setTimeout(() => {
             map.style.transitionDuration = null
         }, 1000);
     }
     else{
-        console.log("click")
-        map.style.transitionDuration = "1s"
-        map.style.width = "100vh"
-        resizeBtn.style.backgroundImage = "url(Images/Icons/maxIcon.png)"
+        if (window.innerHeight > window.innerWidth){
+            minI()
+        }
+        else{
+            maxI()
+        }
+        map.style.transitionDuration = "0.7s"
+        map.style.width = "calc(100vh - 53px)"
+        map.style.minWidth = "calc(100vh - 53px)"
         setTimeout(() => {
             map.style.transitionDuration = null
         }, 1000);
