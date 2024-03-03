@@ -51,7 +51,7 @@ window.onload = function(){
     
         c.children[0].src = imgPaths[i]+splitData[splitData.indexOf("-img")+1]+").png"
         c.children[1].children[0].innerHTML = splitData[1]+" M Ft"
-        c.children[1].children[2].children[0].innerHTML = splitData[-1]
+        c.children[1].children[2].children[0].innerHTML = splitData[splitData.indexOf("-search")+1]
         c.children[1].children[2].children[1].innerHTML = splitData[0]
         var t = c.children[1].children[3].children[0].children[1]
     

@@ -15,13 +15,13 @@ function showResults(){
         results.children[i].style.display = "none"
     }
     for (let i = 0; i < shownResuts.length; i++) {
-        shownResuts[i].style.display = "flex"
+        results.children[i].style.display = null
     }
 }
 
 function showAll(){
     for (let i = 0; i < results.children.length; i++) {
-        results.children[i].style.display = "flex"
+        results.children[i].style.display = null
     }
     resultNumber.innerHTML = "<br>"
 }
