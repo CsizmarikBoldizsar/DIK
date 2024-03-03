@@ -4,22 +4,49 @@ window.onload = function(){
   console.log("resultsChildren--- ",resultsChildren)
   
 
-  function f(c){
+
+
+
+
+
+  var dataTable = []
+  var paths = []
+  var imgPaths = []
+
+  for(let i = 0; i < resultsChildren.length; i++){
+    var c = resultsChildren.item(i)
     var path = "Details/"+c.id.toLowerCase() + ".txt"
     var imgPath = "Images/"+c.id+"/"+c.id+" ("
-    console.log("path--- ",path)
-    console.log("imgPath--- ",imgPath)
+    console.log("pushing paths",i)
 
-    fetch(path)
+    paths.push(path)
+    imgPaths.push(imgPath)
+
+    console.log(paths)
+    console.log(imgPaths)
+  }
+
+
+
+  for(let i = 0; i < resultsChildren.length; i++){
+    fetch(paths[i])
     .then(response => response.text())
-    .then((data) => {      
-      console.log("data--- ",data)
-      d(data)
+    .then((data) => {
+      console.log("pushing data",i)
+
+      dataTable.push(data)
+
+      console.log(dataTable)
     })
   }
 
-  function d(data){
-    var splitData = data.split("\n")
+  for(let i = 0; i < resultsChildren.length; i++){
+    console.log("-------------------------------")
+    var c = resultsChildren.item(i)
+    c.href = c.id+".html"
+    console.log("c--- ",c)
+
+    var splitData = dataTable[i].split("\n")
 
     console.log("src--- ",imgPath+splitData[splitData.indexOf("-img")+1]+").png")
 
@@ -34,23 +61,8 @@ window.onload = function(){
     t.children[0].children[0].innerHTML = splitData[2]+"m<sup>2</sup>"
     t.children[1].children[0].innerHTML = splitData[3]
     console.log("-------------------------------")
+
+    }
   }
 
-
-  for(let i = 0; i < resultsChildren.length; i++){
-
-    console.log("-------------------------------")
-
-    var c = resultsChildren.item(i)
-    c.href = c.id+".html"
-  
-    console.log("c--- ",c)
-
-    f(c)
-
-    
-
-  }
-  
-}
 
