@@ -1,6 +1,6 @@
 var resizeBtn = document.getElementById("mapResizeBtn")
 var map = document.getElementById("mapDiv")
-var smol = false
+var smol = true
 var pins = document.getElementsByClassName("pinBtn")
 
 
@@ -14,8 +14,6 @@ window.onload = function(){
         history.pushState("", "", window.location.pathname + window.location.search)
     }
 }
-
-
 
 
 
@@ -69,4 +67,15 @@ for (let i = 0; i < pins.length; i++) {
             this.children[0].src = "Images/Icons/pinicon.png"
         }
     });
+}
+
+
+if (window.innerHeight > window.innerWidth){
+    map.style.width = "100%"
+    map.style.minWidth = "100%"
+    var smol = false
+}
+else{
+    map.style.width = "calc(100vh - 53px)"
+    map.style.minWidth = "calc(100vh - 53px)"
 }

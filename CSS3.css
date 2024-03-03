@@ -9,6 +9,7 @@ html{
     display: flex;
     position: absolute;
     transform: translate(-50%,-100%);
+    z-index: 200;
 }
 .mainDiv{
     height: fit-content;
@@ -34,7 +35,7 @@ body{
 
 
 #mapResizeBtn{
-    background-image: url(Images/Icons/minIcon.png);
+    background-image: url(Images/Icons/maxIcon.png);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 34px;
@@ -74,7 +75,6 @@ header{
     border: 2px solid #ff0000;
     background-color: #00000000;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
-    z-index: 101;
 }
 .pinBtn:hover{
     cursor: pointer;
@@ -96,7 +96,8 @@ header{
     overflow: hidden;
     position: absolute;
     left: -225%;
-    top: 100%
+    top: 100%;
+    z-index: 201;
 }
 td{
     border: 1px solid #6359856c;
