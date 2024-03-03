@@ -256,6 +256,15 @@ sup{
 html{
     width: 100%;
 }
+
+#ZOOM{
+    transition-duration: 1s;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+
 @media screen and (max-width: 1300px) {
     #imageContainer{
         height: min(55vw,fit-content);

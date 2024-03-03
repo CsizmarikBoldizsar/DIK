@@ -27,6 +27,13 @@ window.onload = function(){
         r.children[0].scr = imgPaths[i]+splitData[splitData.indexOf("-img")+1]+").png"
 
         var t = r.children[1].children[0]
+        console.log("t----",t)
+        console.log("r----",r)
+        console.log(r.children)
+        console.log(r.children[1])
+        console.log(r.children[1].children)
+        console.log(r.children[1].children[0])
+
         t.children[1].children[0].children[0].innerHTML = splitData[0]
         t.children[0].children[0].children[0].innerHTML = splitData[1] + " M Ft"
         t.children[3].children[0].children[0].innerHTML = splitData[2] + "m<sup>2</sup>"
