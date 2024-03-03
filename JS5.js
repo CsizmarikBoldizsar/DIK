@@ -38,17 +38,18 @@ window.onload = function(){
 
       console.log(dataTable)
 
-      for(let i = 0; i < resultsChildren.length; i++){
+      //for(let i = 0; i < resultsChildren.length; i++){
         console.log("-------------------------------")
         var c = resultsChildren.item(i)
         c.href = c.id+".html"
         console.log("c--- ",c)
     
-        var splitData = dataTable[i].split("\n")
+        //var splitData = dataTable[i].split("\n")
+        var splitData = data.split("\n")
+
+        console.log("src--- ",imgPaths[i]+splitData[splitData.indexOf("-img")+1]+").png")
     
-        console.log("src--- ",imgPath+splitData[splitData.indexOf("-img")+1]+").png")
-    
-        c.children[0].src = imgPath+splitData[splitData.indexOf("-img")+1]+").png"
+        c.children[0].src = imgPaths[i]+splitData[splitData.indexOf("-img")+1]+").png"
         c.children[1].children[0].innerHTML = splitData[1]+" M Ft"
         c.children[1].children[2].children[0].innerHTML = splitData[-1]
         c.children[1].children[2].children[1].innerHTML = splitData[0]
@@ -59,7 +60,7 @@ window.onload = function(){
         t.children[0].children[0].innerHTML = splitData[2]+"m<sup>2</sup>"
         t.children[1].children[0].innerHTML = splitData[3]
         console.log("-------------------------------")
-      }
+      //}
     })
   }  
 }
