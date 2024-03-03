@@ -3,27 +3,10 @@ window.onload = function(){
   var resultsChildren = document.getElementById("results").children
   console.log("resultsChildren--- ",resultsChildren)
   
-  for(let i = 0; i < 1; i++){
 
-    console.log("-------------------------------")
-
-    var c = resultsChildren.item(i)
-    c.href = c.id+".html"
-  
-    console.log("c--- ",c)
-
+  function f(c){
     var path = "Details/"+c.id.toLowerCase() + ".txt"
     var imgPath = "Images/"+c.id+"/"+c.id+" ("
-
-    console.log("path--- ",path)
-    console.log("imgPath--- ",imgPath)
-
-    
-    setTimeout(function(){
-      console.log("waiting")
-    }, 2000);
-  
-
     fetch(path)
     .then(response => response.text())
     .then((data) => {      
@@ -45,6 +28,31 @@ window.onload = function(){
       t.children[0].children[0].innerHTML = splitData[2]+"m<sup>2</sup>"
       t.children[1].children[0].innerHTML = splitData[3]
     })
+  }
+
+
+  for(let i = 0; i < resultsChildren.length; i++){
+
+    console.log("-------------------------------")
+
+    var c = resultsChildren.item(i)
+    c.href = c.id+".html"
+  
+    console.log("c--- ",c)
+
+
+
+    console.log("path--- ",path)
+    console.log("imgPath--- ",imgPath)
+
+    
+    setTimeout(function(){
+      console.log("waiting")
+      f(c)
+    }, 2000);
+  
+    
+    
 
     console.log("-------------------------------")
 
