@@ -1,7 +1,10 @@
 var img = document.getElementsByClassName("img")
 
+var exit = document.getElementById("exit")
+
 for (let i = 0; i < img.length; i++) {
     img.item(i).addEventListener("click", function(){
+        exit.style.display = "block"
         //window.open(img[i].src,"_blank")
         console.log(img[i].parentElement.innerHTML)
         console.log(img[i].outerHTML)

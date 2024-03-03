@@ -237,6 +237,7 @@ a:any-link{
     height: 100%;
     user-select: none;
     z-index: 49;
+    display: none;
 }
 
 input{
