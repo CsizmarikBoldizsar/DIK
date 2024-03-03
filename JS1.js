@@ -15,7 +15,7 @@ function showResults(){
         results.children[i].style.display = "none"
     }
     for (let i = 0; i < shownResuts.length; i++) {
-        results.children[i].style.display = null
+        shownResuts[i].style.display = null
     }
 }
 
@@ -57,7 +57,8 @@ sbtn.onclick = function(){
     }
     
 
-    keyWords = sField.value.toLowerCase().split(",")
+    keyWords = sField.value.toLowerCase().replace(" ","").split(",")
+    console.log(keyWords)
     if (keyWords[keyWords.length-1] == ""){
         keyWords.splice(keyWords.length-1,1)
     }
@@ -65,33 +66,13 @@ sbtn.onclick = function(){
     shownResuts = []
     for (let n = 0; n < keyWords.length; n++) {
         for (let i = 0; i < results.children.length; i++) {
-            resultext = results.children[i].children[1].children[2].children[0].innerHTML.toLowerCase()
-            if (resultext.trimStart().trimEnd().replace(" ","").search(keyWords[n].trimStart().trimEnd().replace(" ","")) >= 0){
+            resultext = results.children[i].children[1].children[2].children[0].innerHTML.toLowerCase().replace(" ","")
+            if (resultext.trimStart().trimEnd().search(keyWords[n].trimStart().trimEnd()) >= 0){
                 shownResuts.push(results.children[i])
+                console.log(results.children[i])
             }
         }
     }
-
-
-    //keyWords = sField.value.toLowerCase().split(",")
-    //if (keyWords[keyWords.length-1] == ""){
-    //    keyWords.splice(keyWords.length-1,1)
-    //}
-
-    //resultKeyWords = []
-
-
-    //shownResuts = []
-    //for (let n = 0; n < keyWords.length; n++) {
-   //     for (let i = 0; i < results.children.length; i++) {
-   //         resultKeyWords = results.children[i].children[1].children[2].children[0].innerHTML.toLowerCase().split(",")
-   //         for (let x = 0; x < resultKeyWords.length; x++) {
-   //             if (resultKeyWords[x].trimStart().trimEnd().replace(" ","") == keyWords[n].trimStart().trimEnd().replace(" ","")){
-   //                 shownResuts.push(results.children[i])
-   //             }
-   //         }
-   //     }
-   // }
 
    resultNumber.innerHTML = shownResuts.length+" találat"
    showResults()
