@@ -57,7 +57,7 @@ sbtn.onclick = function(){
     }
     
 
-    keyWords = sField.value.toLowerCase().replace(" ","").split(",")
+    keyWords = sField.value.toLowerCase().split(",")
     console.log(keyWords)
     if (keyWords[keyWords.length-1] == ""){
         keyWords.splice(keyWords.length-1,1)
@@ -67,7 +67,7 @@ sbtn.onclick = function(){
     for (let n = 0; n < keyWords.length; n++) {
         for (let i = 0; i < results.children.length; i++) {
             resultext = results.children[i].children[1].children[2].children[0].innerHTML.toLowerCase().replace(" ","")
-            if (resultext.trimStart().trimEnd().search(keyWords[n].trimStart().trimEnd()) >= 0){
+            if (resultext.trimStart().trimEnd().search(keyWords[n].replace(" ","").trimStart().trimEnd()) >= 0){
                 shownResuts.push(results.children[i])
                 console.log(results.children[i])
             }
