@@ -23,13 +23,21 @@ window.onload = function(){
 resizeBtn.onclick = function(){
     if(smol){
         console.log("click")
+        map.style.transitionDuration = "1s"
         map.style.width = "100%"
         resizeBtn.style.backgroundImage = "url(Images/Icons/minIcon.png)"
+        setTimeout(() => {
+            map.style.transitionDuration = null
+        }, 1000);
     }
     else{
         console.log("click")
-        map.style.width = "50%"
+        map.style.transitionDuration = "1s"
+        map.style.width = "100vh"
         resizeBtn.style.backgroundImage = "url(Images/Icons/maxIcon.png)"
+        setTimeout(() => {
+            map.style.transitionDuration = null
+        }, 1000);
     }
     smol = !smol
 }

@@ -12,7 +12,7 @@ var focused = false
 
 function showResults(){
     for (let i = 0; i < results.children.length; i++) {
-        results.children[i].style.display = "none"
+        shownResuts[i].style.display = "none"
     }
     for (let i = 0; i < shownResuts.length; i++) {
         shownResuts[i].style.display = null
