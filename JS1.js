@@ -36,6 +36,7 @@ sField.onfocus= function(){
 }
 
 exitbtn.onclick = function(){
+    alert("exit")
     dDown.style.display = "none"
     exitbtn.style.display = "none"
     focused = false 
