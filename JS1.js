@@ -30,7 +30,8 @@ function showAll(){
 sField.onfocus= function(){
     dDown.style.display = "flex"
     exitbtn.style.display = "flex"
-    focused = true 
+    focused = true
+    alert("focused")
 }
 
 exitbtn.onclick = function(){
