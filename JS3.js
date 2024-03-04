@@ -6,12 +6,12 @@ var pins = document.getElementsByClassName("pinBtn")
 
 console.log(document.location.hash)
 console.log(!(document.location.hash == ""))
-//alert(!(document.location.hash == ""))
+alert(!(document.location.hash == ""))
 window.onload = function(){
     if (!(document.location.hash == "")) {
         document.title = "Map - " + document.location.hash.replace("#","")
         //window.scrollBy(0,0)
-        document.getElementById(document.location.hash.replace("#","")).children[0].click()
+        
         history.pushState("", "", window.location.pathname + window.location.search)
     }
 }
@@ -69,7 +69,7 @@ for (let i = 0; i < pins.length; i++) {
         }
     });
 }
-
+document.getElementById(document.location.hash.replace("#","")).children[0].click()
 
 if (window.innerHeight > window.innerWidth){
     map.style.width = "100%"
