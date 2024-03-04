@@ -13,7 +13,7 @@ window.onload = function(){
 var focused = false 
 
 function showResults(){
-    alert(shownResults[0])
+    alert("function")
     for (let i = 0; i < results.children.length; i++) {
         results.children[i].display = "none"
     }
