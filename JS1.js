@@ -13,7 +13,7 @@ window.onload = function(){
 var focused = false 
 
 function showResults(){
-    alert(shownResults)
+    alert("results",shownResults)
     for (let i = 0; i < results.children.length; i++) {
         results.children[i].display = "none"
     }
@@ -33,7 +33,6 @@ sField.onfocus= function(){
     dDown.style.display = "flex"
     exitbtn.style.display = "flex"
     focused = true
-    alert("focused")
 }
 
 exitbtn.onclick = function(){
@@ -74,7 +73,7 @@ sbtn.onclick = function(){
             if (resultext.trimStart().trimEnd().search(keyWords[n].replace(" ","").trimStart().trimEnd()) >= 0){
                 shownResuts.push(results.children[i])
                 console.log(results.children[i])
-                alert(results.children[i])
+                alert("result",results.children[i])
             }
         }
     }
