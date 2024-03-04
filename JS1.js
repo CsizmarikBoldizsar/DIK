@@ -13,7 +13,7 @@ window.onload = function(){
 var focused = false 
 
 function showResults(){
-    alert("results",shownResults)
+    alert(shownResults)
     for (let i = 0; i < results.children.length; i++) {
         results.children[i].display = "none"
     }
@@ -73,7 +73,7 @@ sbtn.onclick = function(){
             if (resultext.trimStart().trimEnd().search(keyWords[n].replace(" ","").trimStart().trimEnd()) >= 0){
                 shownResuts.push(results.children[i])
                 console.log(results.children[i])
-                alert("result",results.children[i])
+                alert(results.children[i])
             }
         }
     }
