@@ -9,7 +9,7 @@ console.log(!(document.location.hash == ""))
 window.onload = function(){
     if (!(document.location.hash == "")) {
         document.title = "Map - " + document.location.hash.replace("#","")
-        window.scrollBy(0,-60)
+        window.scrollBy(0,0)
         document.getElementById(document.location.hash.replace("#","")).children[0].click()
         history.pushState("", "", window.location.pathname + window.location.search)
     }
