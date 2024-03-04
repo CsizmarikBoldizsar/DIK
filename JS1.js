@@ -69,8 +69,8 @@ sbtn.onclick = function(){
     shownResuts = []
     for (let n = 0; n < keyWords.length; n++) {
         for (let i = 0; i < results.children.length; i++) {
-            resultext = results.children[i].children[1].children[2].children[0].innerHTML.toLowerCase()
-            if (resultext.replace(" ","").trimStart().trimEnd().search(keyWords[n].replace(" ","").trimStart().trimEnd()) >= 0){
+            resultext = results.children[i].children[1].children[2].children[0].innerHTML.toLowerCase().replace(" ","")
+            if (resultext.trimStart().trimEnd().search(keyWords[n].replace(" ","").trimStart().trimEnd()) >= 0){
                 shownResuts.push(results.children[i])
                 console.log(results.children[i])
             }
