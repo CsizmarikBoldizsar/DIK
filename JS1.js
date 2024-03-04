@@ -7,7 +7,7 @@ var results = document.getElementById("results")
 var shownResuts = []
 var resultNumber = document.getElementById("resultNumber")
 
-
+alert("deployed")
 var focused = false 
 
 function showResults(){
