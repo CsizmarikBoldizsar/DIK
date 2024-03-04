@@ -38,7 +38,7 @@ window.onload = function(){
         t.children[1].children[0].children[0].innerHTML = splitData[0]
         t.children[0].children[0].children[0].innerHTML = splitData[1] + " M Ft"
         t.children[3].children[0].children[0].innerHTML = splitData[2] + "m<sup>2</sup>"
-        t.children[3].children[1].children[0].innerHTML = splitData[3] + "m<sup>2</sup>"
+        t.children[3].children[1].children[0].innerHTML = splitData[3]
         })
     }
 }
