@@ -6,7 +6,7 @@ var pins = document.getElementsByClassName("pinBtn")
 
 console.log(document.location.hash)
 console.log(!(document.location.hash == ""))
-alert(!(document.location.hash == ""))
+
 window.onload = function(){
     if (!(document.location.hash == "")) {
         document.title = "Map - " + document.location.hash.replace("#","")
